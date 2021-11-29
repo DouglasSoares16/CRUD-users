@@ -1,37 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#5342ED" />
-
-  <title>CRUD Users</title>
-
-  <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/partials/page-header.css" />
-  <link rel="stylesheet" href="/styles/partials/cards.css" />
-  <link rel="stylesheet" href="/styles/partials/buttons.css" />
-  <link rel="stylesheet" href="/styles/partials/modal.css" />
-  <link rel="stylesheet" href="/styles/partials/animations.css" />
-  <link rel="stylesheet" href="/styles/pages/index.css" />
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
-
-  <script src="scripts/index.js" defer type="module"></script>
-</head>
-
-<body id="page-index">
+<div id="page-index">
   <header class="page-header">
     <div class="container">
       <section id="summary" class="animate-up delay-1">
-        <a class="button orange" href="create-user.html">
+        <a class="button orange" href="/user/create">
           <span>
-            <img src="./images/plus-24.svg" alt="Novo Usuário" />
+            <img src="/images/plus-24.svg" alt="Novo Usuário" />
           </span>
           Adicionar novo usuário
         </a>
@@ -40,7 +14,7 @@
   </header>
 
   <div class="container">
-    <main class="animate-up delay-2">
+    <main class="main animate-up delay-2">
 
       <div class="cards">
         <div class="card done" data-id="1">
@@ -72,11 +46,11 @@
           </div>
 
           <div class="actions column flex">
-            <a href="user-edit.html" class="button white edit" title="Editar Usuário">
-              <img src="./images/edit-24.svg" alt="Editar Usuário" />
+            <a href="/user/edit" class="button white edit" title="Editar Usuário">
+              <img src="/images/edit-24.svg" alt="Editar Usuário" />
             </a>
             <button class="delete button white" title="Excluir Usuário">
-              <img src="./images/trash-24.svg" alt="Excluir Usuário" />
+              <img src="/images/trash-24.svg" alt="Excluir Usuário" />
             </button>
           </div>
         </div>
@@ -110,11 +84,11 @@
           </div>
 
           <div class="actions column flex">
-            <a href="user-edit.html" class="button white edit" title="Editar Usuário">
-              <img src="./images/edit-24.svg" alt="Editar Usuário" />
+            <a href="/user/edit" class="button white edit" title="Editar Usuário">
+              <img src="/images/edit-24.svg" alt="Editar Usuário" />
             </a>
             <button class="delete button white" title="Excluir Usuário">
-              <img src="./images/trash-24.svg" alt="Excluir Usuário" />
+              <img src="/images/trash-24.svg" alt="Excluir Usuário" />
             </button>
           </div>
         </div>
@@ -124,7 +98,7 @@
 
   <div class="modal-wrapper">
     <div class="modal">
-      <img src="./images/trash-48.svg" alt="Excluir Usuário" title="Excluir Usuário" />
+      <img src="/images/trash-48.svg" alt="Excluir Usuário" title="Excluir Usuário" />
       <h3>Excluir Usuário</h3>
       <p>Quer mesmo excluir esse usuário? <br />
         Ele será apagado para sempre...
@@ -136,6 +110,4 @@
     </div>
     <form method="post" action="/user/delete" id="delete-user"></form>
   </div>
-</body>
-
-</html>
+</div>

@@ -13,6 +13,7 @@ app.engine("handlebars", engine(hbsConfig));
 app.set("view engine", "handlebars");
 app.set("views", join(__dirname, "views"));
 
+app.use(express.static("public"));
 app.use(routes);
 
 app.listen(5500, () => console.log("rodando"));
