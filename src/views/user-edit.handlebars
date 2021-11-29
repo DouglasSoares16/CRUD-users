@@ -10,37 +10,37 @@
 
   <div class="container flex animate-up delay-2">
     <main>
-      <form id="form-job">
+      <form id="form-user" method="POST" action="/user/edit/{{user.id}}">
         <fieldset>
           <legend>Dados do Usuário</legend>
           <div class="separator light"></div>
 
           <div class="input-wrapper">
             <label for="name">Nome</label>
-            <input type="text" id="name" name="name" />
+            <input type="text" id="name" name="name" value="{{user.name}}" />
           </div>
 
           <div class="input-group">
             <div class="input-wrapper">
               <label for="email">Email</label>
-              <input type="text" id="email" name="email" />
+              <input type="text" id="email" name="email" value="{{user.email}}" />
             </div>
 
             <div class="input-wrapper">
               <label for="age">Idade</label>
-              <input type="number" id="age" name="age" />
+              <input type="number" id="age" name="age" value="{{user.age}}" />
             </div>
           </div>
 
           <div class="input-group">
             <div class="input-wrapper">
               <label for="country">País</label>
-              <input type="text" id="country" name="country" />
+              <input type="text" id="country" name="country" value="{{user.country}}" />
             </div>
 
             <div class="input-wrapper">
-              <label for="City">Cidade</label>
-              <input type="text" id="City" name="City" />
+              <label for="city">Cidade</label>
+              <input type="text" id="city" name="city" value="{{user.city}}" />
             </div>
           </div>
 
@@ -55,7 +55,7 @@
         Você pode editar os dados do usuário
       </p>
       <div class="button-group">
-        <button class="button green" form="form-job" type="submit" title="Salvar Dados">Salvar</button>
+        <button class="button green" form="form-user" type="submit" title="Salvar Dados">Salvar</button>
         <a href="/" class="button gray">
           <img src="/images/trash-24.svg" alt="Cancelar cadastro" title="Cancelar cadastro">
         </a>

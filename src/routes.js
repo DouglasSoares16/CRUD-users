@@ -1,17 +1,18 @@
 const { Router } = require("express");
 
+const CreateUserController = require("./controllers/CreateUserController");
+const DashboardController = require("./controllers/DashboardController");
+const UserEditController = require("./controllers/UserEditController");
+
 const routes = Router();
 
-routes.get("/", (request, response) => {
-  return response.render("index", { title: "Dashboard" });
-});
+routes.get("/", DashboardController.show);
+routes.post("/user/delete/:id", DashboardController.delete);
 
-routes.get("/user/create", (request, response) => {
-  return response.render("create-user", { title: "Criar usuário" });
-});
+routes.get("/user/create", CreateUserController.show);
+routes.post("/user/create", CreateUserController.create);
 
-routes.get("/user/edit", (request, response) => {
-  return response.render("user-edit", { title: "Editar usuário" });
-});
+routes.get("/user/edit/:id", UserEditController.show);
+routes.post("/user/edit/:id", UserEditController.update);
 
 module.exports = routes;
