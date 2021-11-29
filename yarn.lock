@@ -477,6 +477,11 @@ event-emitter@^0.3.5:
     d "1"
     es5-ext "~0.10.14"
 
+express-async-errors@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/express-async-errors/-/express-async-errors-3.1.1.tgz#6053236d61d21ddef4892d6bd1d736889fc9da41"
+  integrity sha512-h6aK1da4tpqWSbyCa3FxB/V6Ehd4EEB15zyQq9qe75OZBp0krinNKuH4rAY+S/U/2I36vdLAUFSjQJ+TFmODng==
+
 express-handlebars@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/express-handlebars/-/express-handlebars-6.0.2.tgz#4d377751e3ef70a661aba76d921dee563b08b35a"
