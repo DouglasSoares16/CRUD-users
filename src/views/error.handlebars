@@ -1,6 +1,6 @@
 <header class="page-header inner">
   <div class="container animate-up">
-    <a href="/" class="back">
+    <a style="cursor: pointer;" onclick="toBack()" class="back">
       <img src="/images/back.svg" alt="Voltar" />
     </a>
     <h1>Error</h1>
@@ -15,3 +15,9 @@
   </aside>
 
 </div>
+
+<script>
+  function toBack() {
+    window.history.back();
+  }
+</script>
