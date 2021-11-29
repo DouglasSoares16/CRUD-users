@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const AppError = require("../shared/errors/AppError");
 
 module.exports = {
   async show(request, response) {
@@ -15,7 +16,7 @@ module.exports = {
     const userExists = await User.findByPk(id);
 
     if (!userExists) {
-      throw new Error("Usuário não existe!");
+      throw new AppError("Usuário não existe!", 404);
     }
 
     await User.destroy({

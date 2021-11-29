@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const AppError = require("../shared/errors/AppError");
 
 module.exports = {
   async show(request, response) {
@@ -9,7 +10,7 @@ module.exports = {
     const user = await User.findByPk(id);
 
     if (!user) {
-      throw new Error("Usuário não existe!");
+      throw new AppError("Usuário não existe!", 404);
     }
 
     return response.render("user-edit", { title: "Editar usuário", user });

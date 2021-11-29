@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const AppError = require("../shared/errors/AppError");
 
 module.exports = {
   async show(request, response) {
@@ -21,7 +22,7 @@ module.exports = {
     });
 
     if (userExist) {
-      throw new Error("Já existe um usuário com esse email!");
+      throw new AppError("Já existe um usuário com esse email!");
     }
 
     await User.create({
